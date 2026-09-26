@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#05070d">
+  <title>CEO RAFFSTR JOKI ELITE V4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="logo-ring"><span>R</span></div>
+    <h1>CEO RAFFSTR</h1>
+    <p>JOKI ELITE V4</p>
+    <div class="loader"><i></i></div>
+  </div>
+
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <div>
+        <small>WELCOME TO</small>
+        <h1>CEO RAFFSTR <b>JOKI ELITE</b></h1>
+      </div>
+      <button class="icon-btn" onclick="showToast('Website V4 aktif ⚡')">⋮</button>
+    </header>
+
+    <section id="joki" class="page active">
+      <div class="hero">
+        <div class="hero-glow"></div>
+        <span class="pill">⚡ JOKI KONTAK</span>
+        <h2>Pilih paket<br><span>yang kamu mau.</span></h2>
+        <p>Setelah pembelian, kamu bisa langsung menghubungi admin melalui WhatsApp.</p>
+      </div>
+
+      <div class="section-title"><h3>PAKET JOKI</h3><span>5 Paket</span></div>
+      <div id="packages" class="grid"></div>
+    </section>
+
+    <section id="digital" class="page">
+      <div class="hero compact">
+        <span class="pill">🛒 DIGITAL STORE</span>
+        <h2>Produk <span>Digital</span></h2>
+        <p>Pilih produk lalu lanjut ke pembayaran.</p>
+      </div>
+      <div id="digitalList" class="grid"></div>
+    </section>
+
+    <section id="profile" class="page">
+      <div class="profile-card">
+        <div class="avatar" id="avatar">R</div>
+        <h2 id="profileName">RAFFSTR</h2>
+        <p>Customer • JOKI ELITE V4</p>
+        <button class="outline" onclick="changeName()">✏️ Ubah Nama</button>
+      </div>
+      <div class="stats">
+        <div><b id="orderCount">0</b><span>Order</span></div>
+        <div><b id="lastOrder">-</b><span>ID Terakhir</span></div>
+      </div>
+      <div class="history-card">
+        <div class="section-title"><h3>RIWAYAT</h3><span>Local</span></div>
+        <div id="history"></div>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="nav active" data-page="joki">🔥<span>Joki</span></button>
+      <button class="nav" data-page="digital">💎<span>Digital</span></button>
+      <button class="nav" data-page="profile">👤<span>Profil</span></button>
+    </nav>
+  </main>
+
+  <div id="paymentModal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" onclick="closeModal()">×</button>
+      <span class="pill">💳 PEMBAYARAN</span>
+      <h2 id="payTitle">Paket Joki</h2>
+      <div class="order-summary">
+        <div><span>ID ORDER</span><b id="orderId">#RAFF000000</b></div>
+        <div><span>PAKET</span><b id="payPackage">-</b></div>
+        <div><span>TOTAL</span><strong id="payPrice">Rp0</strong></div>
+      </div>
+      <div class="payment-method">
+        <small>METODE PEMBAYARAN</small>
+        <h3>DANA</h3>
+        <p>083867468118 • A/N LIP</p>
+        <button class="copy" onclick="copyDana()">📋 COPY NOMOR DANA</button>
+      </div>
+      <label class="proof">Bukti transfer (opsional)
+        <input id="proof" type="text" placeholder="Contoh: sudah transfer">
+      </label>
+      <button class="primary full" onclick="confirmPurchase()">✅ KONFIRMASI & HUBUNGI ADMIN</button>
+      <p class="hint">Setelah dikonfirmasi, WhatsApp Admin akan terbuka otomatis.</p>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
